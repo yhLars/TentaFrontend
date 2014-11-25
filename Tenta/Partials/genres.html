@@ -1,0 +1,22 @@
+﻿<div>
+    <h4>Add Genre:</h4>
+    <input type="text" data-ng-model="genre.Name" placeholder="Genre name" />
+    <button data-ng-click="addGenre(genre)">Add new</button>
+</div>
+
+<br />
+<br />
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+
+    <tr data-ng-repeat="g in Genres">
+        <td>{{ g.GenreId }}</td>
+        <td>{{ g.Name }}</td>
+        <td><a href="#/Edit/{{ g.GenreId }}">Edit</a></td>
+        <td><a href="#/Delete/{{ g.GenreId }}">Delete</a></td>
+    </tr>
+</table>
